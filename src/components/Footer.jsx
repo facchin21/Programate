@@ -3,6 +3,7 @@ import IconPhone from '../assets/image/phone 1.png'
 import IconTikTok from '../assets/image/brand-tiktok 1.png'
 import IconInstagram from '../assets/image/brand-instagram 1.png'
 import IconYoutube from '../assets/image/brand-youtube 1.png'
+import { Link } from 'react-router-dom'
 
 
 export const Footer = () => {
@@ -22,17 +23,17 @@ export const Footer = () => {
 
     const socials = [
       {
-        link : "#",
+        link : "https://www.tiktok.com/@programate_",
         image : IconTikTok ,
         name : "Tik Tok"
       },
       {
-        link : "#",
+        link : "https://www.instagram.com/programate__/?igsh=NTA2aXFjODBvMWxx",
         image : IconInstagram,
         name : "Instagram"
       },
       {
-        link : "#",
+        link : "https://www.youtube.com/@Programate_",
         image : IconYoutube,
         name : "Youtube"
       },
@@ -68,9 +69,11 @@ export const Footer = () => {
             <div className='flex items-center gap-4 justify-center'>
               {socials.map((item, key)=>(
                 <article key={key}>
-                  <img src={item.image} alt={`Icono de ${item.name}`}
-                  className='cursor-pointer transition-all duration-300 
-                  icon__footer'/>
+                  <Link to={item.link}>
+                    <img src={item.image} alt={`Icono de ${item.name}`}
+                    className='cursor-pointer transition-all duration-300 
+                    icon__footer'/>
+                  </Link>
                 </article>
               ))}
             </div>
