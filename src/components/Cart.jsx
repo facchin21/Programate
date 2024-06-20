@@ -32,7 +32,7 @@ export const Cart = ({ isVisible, closeCart }) => {
                         <div className='flex flex-col items-center justify-center'>
                           <input type="number" placeholder='Cantidad'
                             className='w-32 h-10 outline-none border border-hover
-                             rounded-md px-2 input__cart'/>
+                             rounded-md px-2'/>
                         </div>
                       </div>
                       <div className='flex justify-between items-center -mt-5'>
