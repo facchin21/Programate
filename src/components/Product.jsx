@@ -15,10 +15,10 @@ export const Product = ({title}) => {
           <article key={key}
           className="shadow-lg flex flex-col justify-center 
           items-center w-96 rounded-md transition-all duration-1000 hover:-translate-y-2">
-            <Link to={`/product/${product.id}`}>
-              <div className="w-full">
+            <Link to={`/product/${product.id}`} target="_blank">
+              <div className="w-full image__product">
                 <img src={product.image_src} alt={`imagen de ${product.name}`}
-                className="w-full"/>
+                className="w-full image__product"/>
               </div>
               <div className="pb-8 pt-4 font-League ml-6">
                 <h3 className="text-3xl transition-all duration-1000 hover:text-hover">

@@ -33,7 +33,7 @@ export const Footer = () => {
         name : "Instagram"
       },
       {
-        link : "https://youtube.com/@programate_?si=OOHWvAUl4bBY_Rnv",
+        link : "https://www.youtube.com/@Programate_",
         image : IconYoutube,
         name : "Youtube"
       },
