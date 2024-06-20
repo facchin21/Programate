@@ -12,7 +12,7 @@ export const Products = [
     {
         id : "001",
         name : "Mate Imperial",
-        price : 21.000,
+        price : 21.999,
         type: "Mates",
         description: "Mate estilo imperial, con detalles en alta calidad!",
         image_src : MateImperial,
@@ -23,7 +23,7 @@ export const Products = [
     {
         id : "002",
         name : "Mate Camionero",
-        price : 17.500,
+        price : 17.503,
         type: "Mates",
         description: "Mate estilo cambionero, con una capacidad justa para las mejores mateadas!",
         image_src : MateCamionero,
@@ -34,7 +34,7 @@ export const Products = [
     {
         id : "003",
         name : "Mate Algarrobo",
-        price : 13.700,
+        price : 13.702,
         type: "Mates",
         description: "Mate de Algarrobo, un mate muy bonito con una calidad maxima!",
         image_src : MateAlgarrobo,
@@ -45,7 +45,7 @@ export const Products = [
     {
         id : "004",
         name : "Termo Stanley Original",
-        price : 162.390,
+        price : 162.399,
         type: "Termos",
         description: "Termo Stanley Original Mate System Classic 1.2 Litros",
         image_src : TermoSystem,

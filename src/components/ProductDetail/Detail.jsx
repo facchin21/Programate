@@ -1,7 +1,6 @@
 import ImageTrucker from "../../assets/image/truckpng.png"
 export const Detail = (product) => {
     const producto = product.product;
-    
 
     return (
     <div className="px-20 pb-8 font-League">
@@ -33,7 +32,8 @@ export const Detail = (product) => {
         </div>
         <div>
             <button className="w-full bg-black text-white
-            font-medium py-2 rounded-md my-6 transition-all duration-1000 hover:bg-hover">
+            font-medium py-2 rounded-md my-6 transition-all
+             duration-1000 hover:bg-hover">
                 Agregar al Carrito
             </button>
         </div>

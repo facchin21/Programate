@@ -1,13 +1,23 @@
 import { Link } from "react-router-dom";
 import {products} from "../Data/Items"
 import ImageLogo from "../assets/image/Logo.png";
-import ImageSearch from "../assets/image/search.png";
 import ImageShopping from "../assets/image/shopping-bag.png";
 import ImageTriangle from "../assets/image/triangle 1.png"
-
+import { Search } from "./Search";
+import { Cart } from "./Cart";
+import { useState } from "react";
 
 export const Navbar = () => {
-  
+  const [isCartVisible, setCartVisible] = useState(false);
+
+    const toggleCart = () => {
+        setCartVisible(!isCartVisible);
+    };
+
+    const closeCart = () => {
+        setCartVisible(false);
+    };
+
   const toggleMenu = () => {
     const menu = document.querySelector('.navbar__menu')
     const items_btn = document.querySelectorAll('.btn__menu-container')
@@ -15,6 +25,7 @@ export const Navbar = () => {
     items_btn.forEach(item => {
         item.classList.toggle('btn__menu-container--active')
     });
+
 }
 
   return (
@@ -33,19 +44,14 @@ export const Navbar = () => {
       <ul className="navbar__menu bg-detail flex-col pt-4 pb-0
        w-10/12 absolute z-10 h-full">
         <li className="flex items-center justify-center gap-12 py-4 ">
-          <div>
-            <img
-              src={ImageSearch}
-              alt="Icono Search"
-              className="cursor-pointer icon__search"
-            />
-          </div>
-          <div>
+          <Search/>
+          <div className="container__shopping" onClick={toggleCart}>
             <img
               src={ImageShopping}
               alt="Icono Shopping Bag"
               className="cursor-pointer icon__shopping"
             />
+             <Cart isVisible={isCartVisible} closeCart={closeCart}/>
           </div>
         </li>
         {products.map((item, key) => (
