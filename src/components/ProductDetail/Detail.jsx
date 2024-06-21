@@ -1,6 +1,10 @@
+import {useContext} from 'react'
+import { CartContext } from '../../Context/CartProvider'
 import ImageTrucker from "../../assets/image/truckpng.png"
 export const Detail = (product) => {
     const producto = product.product;
+
+    const {addItemToCart} = useContext(CartContext)
 
     return (
     <div className="px-20 pb-8 font-League">
@@ -33,7 +37,7 @@ export const Detail = (product) => {
         <div>
             <button className="w-full bg-black text-white
             font-medium py-2 rounded-md my-6 transition-all
-             duration-1000 hover:bg-hover">
+             duration-1000 hover:bg-hover" onClick={()=> addItemToCart(producto)}>
                 Agregar al Carrito
             </button>
         </div>

@@ -1,14 +1,24 @@
-import { Link } from "react-router-dom";
-import {products} from "../Data/Items"
-import ImageLogo from "../assets/image/Logo.png";
 import ImageShopping from "../assets/image/shopping-bag.png";
 import ImageTriangle from "../assets/image/triangle 1.png"
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../Context/CartProvider";
+import ImageLogo from "../assets/image/Logo.png";
+import { Link } from "react-router-dom";
+import {products} from "../Data/Items"
 import { Search } from "./Search";
 import { Cart } from "./Cart";
-import { useState } from "react";
 
 export const Navbar = () => {
+  const {cartItems} = useContext(CartContext)
+  const [productLength, setProductLength] = useState(0)
   const [isCartVisible, setCartVisible] = useState(false);
+
+  useEffect(() => {
+    setProductLength(
+      cartItems.reduce((previous, current) => previous + current.amout, 0)
+    );
+  }, [cartItems]);
+
 
     const toggleCart = () => {
         setCartVisible(!isCartVisible);
@@ -45,13 +55,17 @@ export const Navbar = () => {
        w-10/12 absolute z-10 h-full">
         <li className="flex items-center justify-center gap-12 py-4 ">
           <Search/>
-          <div className="container__shopping" onClick={toggleCart}>
+          <div className="container__shopping relative z-20" onClick={toggleCart}>
             <img
               src={ImageShopping}
               alt="Icono Shopping Bag"
               className="cursor-pointer icon__shopping"
             />
              <Cart isVisible={isCartVisible} closeCart={closeCart}/>
+            <div className="w-4 h-4 bg-white flex items-center justify-center py-4 px-4 
+            rounded-full absolute -top-5 left-8 z-10 text-xl font-bold">
+              {productLength}
+            </div>
           </div>
         </li>
         {products.map((item, key) => (

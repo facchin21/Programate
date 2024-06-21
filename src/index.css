@@ -26,8 +26,11 @@
     transition: all 1000ms ease-in-out;
 }
 .navbar__menu--active{
-    opacity: 1;
+    position: fixed;
+    height: 100%;
+    top: 0;
     left: 0;
+    opacity: 1;
 }
 .btn__menu{
     display: flex;
@@ -55,7 +58,6 @@
 .btn__menu-container--active:nth-child(3){
     transform: rotate(-60deg);
 }
-
 /* Iconos del footer */
 .icon__footer:hover{
     filter: drop-shadow(0px 2px 4px var(--color-hover));
@@ -64,7 +66,6 @@
 .icon__shopping:hover{
     filter: drop-shadow(0px 0px 1px black);
 }
-
 /* Barra de filtros */
 .barra__filtro{
     left: -350px;
@@ -156,25 +157,6 @@
 .container__shopping:hover .icon__shopping{
     transform: rotate(-15deg);
 }
-/* Boton de incremento y decremento del carrito */
-.btn__increment,
-.btn__decrement{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
-    font-weight: 500;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    transition: .7s ease;
-}
-.btn__increment:hover{
-    color: rgb(126, 157, 68);
-}
-.btn__decrement:hover{
-    color: rgba(248, 113, 133);
-}
 /* Carrito de compras */
 .cart-overlay{
     position: fixed;
@@ -202,11 +184,11 @@
     position: absolute;
     font-size: 1.5rem;
     top: 10px;
-    right: 10px;
+    right: 30px;
     cursor: pointer;
     transition: 0.7s ease;
 }
-/* Quitar Barra incremente y decremento en el input. */
+/* Quitar Barra incremento y decremento en el input . */
 .input__cart::-webkit-inner-spin-button,
 .input__cart::-webkit-outer-spin-button{
     -webkit-appearance: none;

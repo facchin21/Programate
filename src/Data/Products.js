@@ -18,6 +18,7 @@ export const Products = [
         image_src : MateImperial,
         colors: ['negro', 'marron'],
         characteristics : ['Calabaza ergonómica y duradera para un agarre cómodo y auténtico disfrute.', 'Detalles resistentes en acero inoxidable que aportan un toque moderno y aseguran durabilidad.', 'Diseño único que combina tradición y sofisticación, realzando la belleza natural de la calabaza.'],
+        amout: 0,
 
     },
     {
@@ -29,6 +30,7 @@ export const Products = [
         image_src : MateCamionero,
         colors: ['negro', 'marron', 'marron oscuro'],
         characteristics : ['Calabaza ergonómica y duradera para un agarre cómodo y auténtico disfrute.', 'Detalles resistentes en acero inoxidable que aportan un toque moderno y aseguran durabilidad.', 'Diseño único que combina tradición y sofisticación, realzando la belleza natural de la calabaza.'],
+        amout: 0,
 
     },
     {
@@ -40,7 +42,8 @@ export const Products = [
         image_src : MateAlgarrobo,
         colors: ['madera'],
         characteristics : ['Calabaza ergonómica y duradera para un agarre cómodo y auténtico disfrute.', 'Detalles resistentes en acero inoxidable que aportan un toque moderno y aseguran durabilidad.', 'Diseño único que combina tradición y sofisticación, realzando la belleza natural de la calabaza.'],
-
+        amout: 0,
+        
     },
     {
         id : "004",
@@ -56,7 +59,10 @@ export const Products = [
             'Incluye tapón cebador de alta precision con gatillo.',
             'Mantiene contenido frio por 30 hs / caliente por 30 Hs / con hielo por 4 días.',
             'Garantia de por vida entregada por fabricante'],
+        amout: 0,
+
     }, 
+        
     {
         id : "005",
         name : "Termo Nuevo Termolar",
@@ -69,7 +75,8 @@ export const Products = [
              'Agua caliente garantizada hasta por 20 horas.',
               'Capacidad de 1 litro.',
             'Apertura con pico.','Incluye manija.'],
-
+        amout: 0,
+        
     },
     {
         id : "006",
@@ -82,7 +89,8 @@ export const Products = [
         characteristics : ['Mantiene caliente 24 horas.' , 'Mantiene frio 24 horas.',
              'Mantiene hielo 5 dias.', 'Acero inoxidable 18/8.', 'Aislamiento al vacío de doble pared.',
               'A prueba de fugas + empacable.'],
-
+        amout: 0,
+        
     },
     {
         id : "007",
@@ -94,7 +102,8 @@ export const Products = [
         colors: ['Acero Inoxidable'],
         characteristics : ['El mismo pico de loro de siempre, pero con ese detalle artesano del cincelador.',
              'CALIDAD PREMIUM, TRABAJO ARTESANAL'],
-
+        amout: 0,
+            
     },
     {
         id : "008",
@@ -105,7 +114,8 @@ export const Products = [
         image_src : Bombillon,
         colors: ['Acero Inoxidable'],
         characteristics : ['CALIDAD PREMIUM, TRABAJO ARTESANAL.'],
-
+        amout: 0,
+        
     },
     {
         id : "009",
@@ -118,6 +128,7 @@ export const Products = [
         characteristics : ['Para 4 Articulos.',
              '100% cuero vacuno.',
               'Facil transporte.'],
-
+        amout: 0,
+        
     },
 ]
