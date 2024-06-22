@@ -7,12 +7,12 @@ export const Detail = (product) => {
     const {addItemToCart} = useContext(CartContext)
 
     return (
-    <div className="px-20 pb-8 font-League">
-        <h3 className="font-medium text-2xl">
+    <div className="px-8 pb-8 font-League">
+        <h3 className="font-medium text-2xl pb-4">
             ${producto.price}
         </h3>
-        <div className="flex gap-2">
-            <div className="flex gap-2">
+        <div className="flex items-center justify-center gap-2">
+            <div className="flex gap-2 items-center">
                 <label>Color:</label>
                 <select name="color" className="rounded-md py-1">
                     {producto.colors.map((color, key) => (
@@ -22,7 +22,7 @@ export const Detail = (product) => {
                     ))}
                 </select>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center justify-center">
                 <label>Caja de regalo</label>
                 <select name="CajaRegalo" className="rounded-md py-1">
                     <option value="true">Si</option>
@@ -30,14 +30,15 @@ export const Detail = (product) => {
                 </select>
             </div>
         </div>
-        <div>
+        <div className='flex justify-center items-center gap-2 pt-2'>
             <label>Cantidad</label>
             <input type="number" className="rounded-md pl-4 py-1 mx-2 my-4" />
         </div>
         <div>
             <button className="w-full bg-black text-white
             font-medium py-2 rounded-md my-6 transition-all
-             duration-1000 hover:bg-hover" onClick={()=> addItemToCart(producto)}>
+             duration-1000 hover:bg-hover" 
+             onClick={()=> addItemToCart(producto)}>
                 Agregar al Carrito
             </button>
         </div>

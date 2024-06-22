@@ -169,14 +169,14 @@
     transition:0.3s ease-in-out;
 }
 .cart-overlay--show{
-    width: 85%;
-    right: -45px;
+    width: 350px;
+    right: 0;
 }
 .cart-overlay-content{
     position: absolute;
     background: white;
     height: 100%;
-    padding: 25px;
+    padding: 15px;
     overflow-y: auto;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
 }
@@ -184,7 +184,7 @@
     position: absolute;
     font-size: 1.5rem;
     top: 10px;
-    right: 30px;
+    right: 40px;
     cursor: pointer;
     transition: 0.7s ease;
 }

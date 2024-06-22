@@ -19,7 +19,7 @@ export const Home = () => {
         {hasSearched && filteredProducts.length > 0 ?(
             <ProductFilter title={searchedTitle} filteredProducts={filteredProducts} hasSearched={hasSearched}/>
           ):(
-              <ProductFilter title ={title} filteredProducts={productFilter}/>
+            <ProductFilter title ={title} filteredProducts={productFilter}/>
           )}
         <Stats/>
         <Personalized/>

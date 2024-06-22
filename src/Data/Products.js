@@ -12,7 +12,7 @@ export const Products = [
     {
         id : "001",
         name : "Mate Imperial",
-        price : 21.999,
+        price : 21999,
         type: "Mates",
         description: "Mate estilo imperial, con detalles en alta calidad!",
         image_src : MateImperial,
@@ -24,7 +24,7 @@ export const Products = [
     {
         id : "002",
         name : "Mate Camionero",
-        price : 17.503,
+        price : 17503,
         type: "Mates",
         description: "Mate estilo cambionero, con una capacidad justa para las mejores mateadas!",
         image_src : MateCamionero,
@@ -36,7 +36,7 @@ export const Products = [
     {
         id : "003",
         name : "Mate Algarrobo",
-        price : 13.702,
+        price : 13702,
         type: "Mates",
         description: "Mate de Algarrobo, un mate muy bonito con una calidad maxima!",
         image_src : MateAlgarrobo,
@@ -48,7 +48,7 @@ export const Products = [
     {
         id : "004",
         name : "Termo Stanley Original",
-        price : 162.399,
+        price : 162399,
         type: "Termos",
         description: "Termo Stanley Original Mate System Classic 1.2 Litros",
         image_src : TermoSystem,
@@ -66,7 +66,7 @@ export const Products = [
     {
         id : "005",
         name : "Termo Nuevo Termolar",
-        price : 95.329,
+        price : 95329,
         type: "Termos",
         description: "Termo Nuevo Termolar R-evolution Negro + Pico Click Mate",
         image_src : TermoTermolar,
@@ -81,7 +81,7 @@ export const Products = [
     {
         id : "006",
         name : "STANLEY CLASSIC 1.4",
-        price : 152.459,
+        price : 152459,
         type: "Termos",
         description: "Termo Stanley Classic 1.4l NEGRO",
         image_src : TermoStanley,
@@ -108,7 +108,7 @@ export const Products = [
     {
         id : "008",
         name : "Bombillon",
-        price : 13.299,
+        price : 13299,
         type: "Bombillas",
         description: "Bombillon recto deluxe macizo de alpaca y bronce",
         image_src : Bombillon,
@@ -120,7 +120,7 @@ export const Products = [
     {
         id : "009",
         name : "MATERA CANASTA CUERO",
-        price : 44.212,
+        price : 44212,
         type: "Materas",
         description: "MATERA CANASTA CUERO PREMIUM",
         image_src : MateraCuero,

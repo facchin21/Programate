@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 
 export const Filter = ({ toggleFilter }) => {
   const colors = ['Negro', "Blanco", "Marron"]
   const cajaRegalo = ['Si', 'No']
-
     return (
     <div className="flex flex-col py-12 px-6 bg-detail w-48 h-screen absolute barra__filtro">
         <button className='btn__menu' onClick={toggleFilter}>

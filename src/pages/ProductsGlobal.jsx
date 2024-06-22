@@ -26,7 +26,7 @@ export const ProductsGlobal = () => {
           <header className="w-full text-center py-6">
             <h2 className="text-3xl font-medium font-League">{type}</h2>
           </header>
-          <div className="w-8 mx-4 py-3 fixed">
+          <div className="w-8 mx-2 fixed">
             <img src={ImagenFiltro} alt="Logo filtros" 
             onClick={toggleFilter} className="cursor-pointer"/>
           </div>
@@ -35,17 +35,17 @@ export const ProductsGlobal = () => {
             {productos.map((product, key) => (
             <article key={key}
             className="shadow-lg flex flex-col justify-center 
-            items-center w-96 rounded-md transition-all duration-1000 hover:-translate-y-2">
+            items-center w-72 rounded-md transition-all duration-1000 hover:-translate-y-2">
               <Link to={`/product/${product.id}`}>
-                <div className="w-full">
+                <div className="w-72 flex justify-center items-center">
                   <img src={product.image_src} alt={`imagen de ${product.name}`}
                   className="w-full"/>
                 </div>
-                <div className="pb-8 pt-4 font-League ml-6">
+                <div className="pb-8 pt-4 font-League px-4">
                   <h3 className="text-3xl transition-all duration-1000 hover:text-hover">
                       {product.name}
                     </h3>
-                  <h4 className="text-base text-gray-500 w-80">
+                  <h4 className="text-sm text-gray-500 w-64">
                     {product.description}
                   </h4>
                   <h4 className="text-xl">${product.price}</h4>

@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useContext, useEffect, useState } from 'react';
-import Imagen from '../assets/image/algarrob 1.png'
+import { useContext } from 'react';
 import { CartContext } from '../Context/CartProvider';
 
 export const Cart = ({ isVisible, closeCart }) => {
@@ -15,12 +14,12 @@ export const Cart = ({ isVisible, closeCart }) => {
   return (
     <div className={`cart-overlay ${isVisible ? 'cart-overlay--show' : ''}`} onClick={closeCart}>
       <div className="cart-overlay-content w-96 font-League cursor-default" onClick={stopPropagation}>
-        <button className="close-button" onClick={closeCart}>
+        <button className="close-button transition-all duration-300 hover:text-red-400" onClick={closeCart}>
           Cerrar
         </button>
           
         <header className='pt-16 pb-4'>
-          <h2 className='text-xl font-semibold'>Carrito de Compras</h2>
+          <h2 className='text-2xl font-semibold pl-2'>Carrito de Compras</h2>
         </header>
 
         {cartItems.length === 0 ? (
@@ -55,6 +54,10 @@ export const Cart = ({ isVisible, closeCart }) => {
             ))}
           </article>
         )}
+        <div className='flex items-center justify-between ml-2 mr-12 py-8'>
+          <h3 className='text-xl'>Total:</h3>
+          <p className='text-xl'>${total}</p>
+        </div>
       </div>
     </div>
   )
