@@ -35,12 +35,11 @@ export const Navbar = () => {
     items_btn.forEach(item => {
         item.classList.toggle('btn__menu-container--active')
     });
-
 }
 
   return (
     <nav className="bg-primary font-League">
-      <div className="flex justify-center items-center px-6">
+      <div className="flex justify-center items-center px-6 z-50">
         <div>
           <img src={ImageLogo} alt="Logo Programate"
           className="w-10/12" />
@@ -53,6 +52,10 @@ export const Navbar = () => {
       </div>
       <ul className="navbar__menu bg-detail flex-col pt-4 pb-0
        w-10/12 absolute z-10 h-full">
+        <button className="text-3xl w-full relative">
+          <p className="absolute top-0 right-8"
+          onClick={toggleMenu}>X</p>
+        </button>
         <li className="flex items-center justify-center gap-12 py-4 ">
           <Search/>
           <div className="container__shopping relative z-20" onClick={toggleCart}>

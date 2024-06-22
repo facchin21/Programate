@@ -10,7 +10,7 @@ export const ProductFilter = ({title,filteredProducts, hasSearched}) => {
                 Resultado de la busqueda:
             </h3>
         )}
-        <h1 className="text-4xl font-extrabold text-center uppercase">
+        <h1 className="text-4xl font-bold text-center ">
           {title}
         </h1>
       </header>

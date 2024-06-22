@@ -49,14 +49,8 @@
     transition: all .5s;
     transform-origin: left;
 }
-.btn__menu-container--active:first-child{
-    transform: rotate(60deg);
-}
-.btn__menu-container--active:nth-child(2){
+.btn__menu-container--active{
     opacity: 0;
-}
-.btn__menu-container--active:nth-child(3){
-    transform: rotate(-60deg);
 }
 /* Iconos del footer */
 .icon__footer:hover{
