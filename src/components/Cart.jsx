@@ -37,7 +37,7 @@ export const Cart = ({ isVisible, closeCart }) => {
                     <p className='text-lg mr-3'>${item.price}</p>
                     <div className='flex flex-col items-center justify-center'>
                       <input type="number" placeholder={`${item.amout}`}
-                        className='w-12 h-10 placeholder:text-black placeholder:font-bold outline-none border border-hover rounded-md px-2 input__cart'
+                        className='w-12 h-10 placeholder:text-black placeholder:font-bold outline-none border border-hover rounded-md px-3 input__cart'
                         value={item.quantity}
                         readOnly
                       />
@@ -57,6 +57,20 @@ export const Cart = ({ isVisible, closeCart }) => {
         <div className='flex items-center justify-between ml-2 mr-12 py-8'>
           <h3 className='text-xl'>Total:</h3>
           <p className='text-xl'>${total}</p>
+        </div>
+
+        <div className='w-full flex items-center justify-center'>
+          {total > 0 ? (
+              <button className='bg-black text-white px-28 h-12 rounded-md
+                flex items-center justify-center transition-all duration-1000 hover:bg-hover'>
+              Pagar
+              </button>
+          ) : (
+            <button className='bg-black text-white px-28 h-12 rounded-md
+                flex items-center justify-center cursor-not-allowed' disabled>
+              Pagar
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -5,11 +5,11 @@ import { useEffect } from "react";
 
 export const Banner = () => {    
 
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth > 1024);
 
   useEffect(()=>{
     const handleResize = () =>{
-      setIsDesktop(window.innerWidth > 1024);
+      setIsMobile(window.innerWidth < 700);
     }
 
     window.addEventListener('resize', handleResize);
@@ -21,7 +21,7 @@ export const Banner = () => {
   
     return (
     <div className='w-full'>
-      {!isDesktop ?
+      {isMobile ?
         <img src={ImagenBanner} alt="Imagen del Banner Mobile" 
         className='w-full object-contain h-auto'/>
         : 
