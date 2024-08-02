@@ -41,7 +41,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-black text-white font-League py-8
-    flex flex-col gap-8 items-center justify-center">
+    flex flex-col md:flex-row md:gap-32 gap-8 items-center justify-center">
           <div className='flex flex-col items-center justify-center'>
             <header>
               <h3 className='text-2xl font-semibold'>

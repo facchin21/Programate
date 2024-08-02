@@ -37,8 +37,8 @@ export const Personalized = () => {
         <header className='w-full text-center'>
             <h1 className='text-4xl font-semibold py-4'>{title}</h1>
         </header>
-        <div className='flex flex-col items-center justify-center'>
-            <div className='w-full flex justify-center py-8'>
+        <div className='flex flex-col md:flex-row items-center justify-center'>
+            <div className='w-full flex justify-center py-8 md:w-3/12'>
                 <img src={ImageMate} alt="Imagen de un Mate"
                 className='w-10/12 transition-all duration-1000 hover:-translate-y-2'/>
             </div>
@@ -50,13 +50,13 @@ export const Personalized = () => {
                         <h3 className='font-semibold text-lg'>{item.paso}</h3>
                     </li>
                 ))}
-            </ul>
-
             <button className='py-4 px-6 bg-black text-white font-bold
             text-lg transition-all duration-1000 hover:bg-hover'
             onClick={openWhatsApp}>
                 {btn_text}
             </button>
+            </ul>
+
         </div>
     </div>
   )

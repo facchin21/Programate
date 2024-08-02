@@ -12,7 +12,7 @@ export const Navbar = () => {
   const {cartItems} = useContext(CartContext)
   const [productLength, setProductLength] = useState(0)
   const [isCartVisible, setCartVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth > 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   useEffect(()=>{
     const handleResize = () =>{
@@ -121,7 +121,7 @@ export const Navbar = () => {
         ))}
       </ul>
   ): (
-    <ul className="flex items-center justify-between w-full px-16 pb-6">
+    <ul className="flex items-center gap-32 justify-center w-full px-16 pb-6">
       {products.map((item, key) => (
         <li key={key} className="relative group">
           {item.name === "Productos" ? (

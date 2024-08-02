@@ -28,38 +28,40 @@ export const ProductsGlobal = () => {
 
   return (
     <div className="bg-detail">
-      <Navbar/>
-      <main className="pt-6">
-        <Filter className="barra__filtro" toggleFilter={toggleFilter} productos={productos} handleFilter={handleFilter} />
-        <Back/>
-        <header className="w-full text-center py-6">
-          <h2 className="text-3xl font-medium font-League">{type}</h2>
-        </header>
-        <div className="w-8 mx-2 fixed">
-          <img src={ImagenFiltro} alt="Logo filtros" onClick={toggleFilter} className="cursor-pointer"/>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-6 pt-6 pb-12">
-          {displayedProducts.map((product, key) => (
-            <article key={key} className="shadow-lg flex flex-col justify-center items-center w-72 rounded-md transition-all duration-1000 hover:-translate-y-2">
-              <Link to={`/product/${product.id}`}>
-                <div className="w-72 flex justify-center items-center">
-                  <img src={product.image_src} alt={`imagen de ${product.name}`} className="w-full"/>
-                </div>
-                <div className="pb-8 pt-4 font-League px-4">
-                  <h3 className="text-3xl transition-all duration-1000 hover:text-hover">
-                    {product.name}
-                  </h3>
-                  <h4 className="text-sm text-gray-500 w-64">
-                    {product.description}
-                  </h4>
-                  <h4 className="text-xl">${product.price}</h4>
-                </div>
-              </Link>
-            </article>
-          ))}
-        </div>
-        <Footer/>
-      </main>
-    </div>
+    <Navbar />
+    <main className="pt-6">
+      <Filter className="barra__filtro" toggleFilter={toggleFilter} productos={productos} handleFilter={handleFilter} />
+      <Back />
+      <header className="w-full text-center py-6">
+        <h2 className="text-3xl font-medium font-League">{type}</h2>
+      </header>
+      <div className="w-8 mx-2 fixed">
+        <img src={ImagenFiltro} alt="Logo filtros" onClick={toggleFilter} className="cursor-pointer" />
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6 pb-12">
+        {displayedProducts.map((product, key) => (
+          <article key={key} className="shadow-lg flex flex-col justify-center
+          items-center w-72 rounded-md 
+          transition-transform duration-500 hover:scale-105">
+            <Link to={`/product/${product.id}`}>
+              <div className="w-full flex justify-center items-center">
+                <img src={product.image_src} alt={`imagen de ${product.name}`} className="w-full" />
+              </div>
+              <div className="pb-8 pt-4 font-League px-4">
+                <h3 className="text-xl sm:text-3xl transition-all duration-1000 hover:text-hover">
+                  {product.name}
+                </h3>
+                <h4 className="text-sm text-gray-500 w-full sm:w-64">
+                  {product.description}
+                </h4>
+                <h4 className="text-lg sm:text-xl">${product.price}</h4>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+      <Footer />
+    </main>
+  </div>
   );
 };
